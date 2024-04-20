@@ -1,0 +1,65 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  padding: 120px 20px 60px 20px;
+  margin: 0 auto;
+  gap: 100px;
+  align-items: start;
+}
+.footer-texto {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  max-width: 32ch;
+  color: #a3a3a3;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin: 0px;
+}
+
+.footer-copy {
+  color: #8f8f8f;
+  font-size: 1.125rem;
+  grid-column: 1/-1;
+}
+.contato-lista li {
+  line-height: 3;
+  position: relative;
+}
+.contato-lista li::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10px;
+  left: -36px;
+}
+.email::before {
+  background: url("/img/envelope.svg");
+}
+.insta::before {
+  background: url("/img/instagram.svg");
+}
+.tel::before {
+  background: url("/img/whatsapp.svg");
+}
+@media (max-width: 800px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .contato-lista li::before {
+    display: none;
+  }
+}
